@@ -63,7 +63,8 @@ my @testcases = (
         description => 'does not affect for eval block',
         filename    => 't/data/eval.pl',
         expected    => [],
-    },);
+    },
+);
 
 for my $testcase (@testcases) {
     my $code = do {
