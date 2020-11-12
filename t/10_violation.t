@@ -64,6 +64,11 @@ my @testcases = (
         filename    => 't/data/eval.pl',
         expected    => [],
     },
+    {
+        description => '`return` in loop block is OK',
+        filename    => 't/data/loop-block.pl',
+        expected    => [],
+    },
 );
 
 for my $testcase (@testcases) {
