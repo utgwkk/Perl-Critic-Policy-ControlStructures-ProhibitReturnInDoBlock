@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Do not \"return\" in \"do\" block",
    "author" : [
       "utgwkk <utagawakiki@gmail.com>"
    ],

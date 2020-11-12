@@ -50,15 +50,46 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::ControlStructures::ProhibitReturnInDoBlock - It's new $module
+Perl::Critic::Policy::ControlStructures::ProhibitReturnInDoBlock - Do not "return" in "do" block
 
-=head1 SYNOPSIS
-
-    use Perl::Critic::Policy::ControlStructures::ProhibitReturnInDoBlock;
+=head1 AFFILIATION
+ 
+This policy is a policy in the L<Perl::Critic::Policy::ControlStructures::ProhibitReturnInDoBlock> distribution.
 
 =head1 DESCRIPTION
 
-Perl::Critic::Policy::ControlStructures::ProhibitReturnInDoBlock is ...
+Using C<return> statement in C<do> block causes unexpected behavior. A C<return> returns from entire subroutine, not from C<do> block.
+
+    sub foo {
+        my ($x) = @_;
+        my $y = do {
+            return 2 if $x < 10; # not ok
+            return 3 if $x < 100; # not ok
+            4;
+        };
+        return $x * $y;
+    }
+    print foo(5); # prints 2, not 10;
+
+If you want to do early-return, you should move the body of C<do> block to a new subroutine and call it.
+
+    sub calc_y {
+        my ($x) = @_;
+        return 2 if $x < 10;
+        return 3 if $x < 100;
+        return 4;
+    }
+
+    sub foo {
+        my ($x) = @_;
+        my $y = calc_y($x);
+        return $x * $y;
+    }
+    print foo(5); # prints 10
+
+=head1 CONFIGURATION
+ 
+This Policy is not configurable except for the standard options.
 
 =head1 LICENSE
 
