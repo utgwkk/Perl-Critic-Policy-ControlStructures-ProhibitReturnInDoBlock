@@ -5,8 +5,8 @@ use warnings;
 use parent 'Perl::Critic::Policy';
 use List::Util qw(any);
 use Perl::Critic::Utils qw(:severities);
-use constant DESC => '`return` statement in `do` block';
-use constant EXPL => 'A `return` in `do` block causes confusing behavior. Do not use it.';
+use constant DESC => '"return" statement in "do" block';
+use constant EXPL => 'A "return" in `do` block causes confusing behavior. Do not use it.';
 
 our $VERSION = "0.01";
 

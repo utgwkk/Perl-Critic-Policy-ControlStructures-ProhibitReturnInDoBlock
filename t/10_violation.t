@@ -8,7 +8,7 @@ my @testcases = (
         filename    => 't/data/single.pl',
         expected    => array {
             item object {
-                call description   => '`return` statement in `do` block';
+                call description   => '"return" statement in "do" block';
                 call line_number   => 8;
                 call column_number => 9;
             };
