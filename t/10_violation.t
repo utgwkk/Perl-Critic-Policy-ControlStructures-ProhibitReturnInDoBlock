@@ -33,6 +33,23 @@ my @testcases = (
         },
     },
     {
+        description => 'multiple violation for multiple subroutines',
+        filename    => 't/data/multiple-subroutines.pl',
+        expected    => array {
+            item object {
+                call description   => '"return" statement in "do" block';
+                call line_number   => 8;
+                call column_number => 9;
+            };
+            item object {
+                call description   => '"return" statement in "do" block';
+                call line_number   => 19;
+                call column_number => 9;
+            };
+            end;
+        },
+    },
+    {
         description => 'anonymous subroutine call is OK',
         filename    => 't/data/anonymous-subroutine-call.pl',
         expected    => [],
