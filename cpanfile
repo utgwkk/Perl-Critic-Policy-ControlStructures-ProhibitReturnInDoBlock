@@ -1,4 +1,5 @@
 requires 'perl', '5.008001';
+requires 'List::Util';
 requires 'Perl::Critic::Policy';
 requires 'Perl::Critic::Utils';
 

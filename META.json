@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "List::Util" : "0",
             "Perl::Critic::Policy" : "0",
             "Perl::Critic::Utils" : "0",
             "perl" : "5.008001"
