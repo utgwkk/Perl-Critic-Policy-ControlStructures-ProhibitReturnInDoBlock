@@ -20,6 +20,11 @@ my @testcases = (
         filename    => 't/data/anonymous-subroutine-call.pl',
         expected    => [],
     },
+    {
+        description => 'separated subroutine call is OK',
+        filename    => 't/data/separated-subroutines.pl',
+        expected    => [],
+    },
 );
 
 for my $testcase (@testcases) {
