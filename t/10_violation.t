@@ -16,6 +16,23 @@ my @testcases = (
         },
     },
     {
+        description => 'multiple violation',
+        filename    => 't/data/multiple.pl',
+        expected    => array {
+            item object {
+                call description   => '"return" statement in "do" block';
+                call line_number   => 8;
+                call column_number => 9;
+            };
+            item object {
+                call description   => '"return" statement in "do" block';
+                call line_number   => 9;
+                call column_number => 9;
+            };
+            end;
+        },
+    },
+    {
         description => 'anonymous subroutine call is OK',
         filename    => 't/data/anonymous-subroutine-call.pl',
         expected    => [],

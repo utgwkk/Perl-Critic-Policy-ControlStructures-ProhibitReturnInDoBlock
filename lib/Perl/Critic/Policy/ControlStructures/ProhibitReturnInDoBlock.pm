@@ -23,11 +23,13 @@ sub violates {
     my @stmts = $elem->schildren;
     return if !@stmts;
 
+    my @violations;
+
     for my $stmt (@stmts) {
-        return $self->violation(DESC, EXPL, $stmt) if _is_return($stmt);
+        push @violations, $self->violation(DESC, EXPL, $stmt) if _is_return($stmt);
     }
 
-    return;
+    return @violations;
 }
 
 sub _is_do_block {
