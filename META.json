@@ -57,6 +57,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/utgwkk/Perl-Critic-Policy-ControlStructures-ProhibitReturnInDoBlock/issues"
+      },
+      "homepage" : "https://github.com/utgwkk/Perl-Critic-Policy-ControlStructures-ProhibitReturnInDoBlock",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/utgwkk/Perl-Critic-Policy-ControlStructures-ProhibitReturnInDoBlock.git",
+         "web" : "https://github.com/utgwkk/Perl-Critic-Policy-ControlStructures-ProhibitReturnInDoBlock"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:UTGWKK",
    "x_serialization_backend" : "JSON::PP version 4.02",
