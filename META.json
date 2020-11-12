@@ -42,11 +42,15 @@
       },
       "runtime" : {
          "requires" : {
+            "Perl::Critic::Policy" : "0",
+            "Perl::Critic::Utils" : "0",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
+            "Perl::Critic" : "0",
+            "Test2::V0" : "0",
             "Test::More" : "0.98"
          }
       }
