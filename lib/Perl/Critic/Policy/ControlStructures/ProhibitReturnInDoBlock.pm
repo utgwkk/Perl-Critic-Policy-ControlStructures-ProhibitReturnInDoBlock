@@ -8,7 +8,7 @@ use Perl::Critic::Utils qw(:severities);
 use constant DESC => '"return" statement in "do" block.';
 use constant EXPL => 'A "return" in "do" block causes confusing behavior.';
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub supported_parameters { return (); }
 sub default_severity     { return $SEVERITY_HIGHEST; }
